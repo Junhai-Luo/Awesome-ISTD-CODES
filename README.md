@@ -51,9 +51,7 @@ Feature 模式直接取原网络中较深层或融合后的 feature map，接入
 概念形式：
 
 ```text
-Backbone / Encoder-Decoder feature
-    -> detection head
-    -> bbox predictions
+Backbone / Encoder-Decoder feature    -> detection head    -> bbox predictions
 ```
 
 特点：
