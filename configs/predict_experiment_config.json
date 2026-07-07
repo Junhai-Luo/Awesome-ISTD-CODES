@@ -1,0 +1,38 @@
+{
+  "dataset": "DAUB",
+  "network": "sstnet",
+  "train_model_path": "",
+  "predict": {
+    "json_path": "",
+    "dataset_img_path": "",
+    "model_path": "",
+    "classes_path": "model_data/classes.txt",
+    "output_dir": "",
+    "predict_output_root": "result/predict",
+    "input_size": 512,
+    "dna_input_size": 512,
+    "dna_input_size_by_dataset": {
+      "DAUB": 512,
+      "IRDST": 512,
+      "ITSDT_15K": 512
+    },
+    "num_classes": 1,
+    "confidence": 0.001,
+    "nms_iou": 0.65,
+    "vis_confidence": 0.3,
+    "vis_max_boxes": 0,
+    "num_frame": 5,
+    "uiu_det_mode": "",
+    "alc_det_mode": "",
+    "letterbox": true,
+    "cpu": false,
+    "auto_input_from_json": false,
+    "output_mode": "eval_only",
+    "save_vis": false,
+    "save_eval_json": false,
+    "run_eval": true,
+    "save_failed_images": true,
+    "failed_iou": 0.5
+  },
+  "dataset_root_prefix": ""
+}

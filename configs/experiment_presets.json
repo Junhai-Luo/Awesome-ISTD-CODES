@@ -1,0 +1,369 @@
+{
+  "dataset_presets": {
+    "DAUB": {
+      "train_script": "train/train_sequence_det.py",
+      "default_train_txt": "data_txt/DAUB_train.txt",
+      "default_val_txt": "data_txt/DAUB_val.txt",
+      "default_predict": {
+        "json_path": "data_json/DAUB_test.json",
+        "dataset_img_path": "datasets/DAUB"
+      }
+    },
+    "IRDST": {
+      "train_script": "train/train_sequence_det.py",
+      "default_train_txt": "data_txt/IRDST_train.txt",
+      "default_val_txt": "data_txt/IRDST_val.txt",
+      "default_predict": {
+        "json_path": "data_json/IRDST_test.json",
+        "dataset_img_path": "datasets/IRDST"
+      }
+    },
+    "ITSDT_15K": {
+      "train_script": "train/train_sequence_det.py",
+      "default_train_txt": "data_txt/ITSDT_15k_train.txt",
+      "default_val_txt": "data_txt/ITSDT_15k_val.txt",
+      "default_predict": {
+        "json_path": "data_json/ITSDT_15k_test.json",
+        "dataset_img_path": "datasets/ITSDT-15k"
+      }
+    }
+  },
+  "network_pretrained_map": {
+    "sstnet": "model_data/sst_pre_trained.pth",
+    "tridos": "model_data/yolox_s.pth",
+    "slowfastnet": "model_data/yolox_s.pth",
+    "slowfastnet_9520": "model_data/yolox_s.pth",
+    "acm_fpn": "",
+    "acm_unet": "",
+    "acm_unet_saliency": "",
+    "dnanet": "model_data/pretrain_DNANet_model.tar",
+    "dnanet_saliency": "model_data/pretrain_DNANet_model.tar",
+    "uiunet": "model_data/uiunet.pth",
+    "uiunet_saliency": "model_data/uiunet.pth",
+    "alcnet": "",
+    "alcnet_saliency": "",
+    "sctransnet": "",
+    "dqaligner": "",
+    "dqaligner_saliency": ""
+  },
+  "network_alias": {
+    "sstnet": "sstnet",
+    "tridos": "tridos",
+    "slowfastnet": "slowfastnet",
+    "slowfastnet_9520": "slowfastnet_9520",
+    "acm_fpn": "acm_fpn",
+    "acm_unet": "acm_unet",
+    "acm_unet_saliency": "acm_unet_saliency",
+    "dnanet": "dnanet",
+    "dnanet_saliency": "dnanet_saliency",
+    "uiunet": "uiunet",
+    "uiunet_saliency": "uiunet_saliency",
+    "alcnet": "alcnet",
+    "alcnet_saliency": "alcnet_saliency",
+    "sctransnet": "sctransnet",
+    "sctransnet_det": "sctransnet",
+    "dqaligner": "dqaligner",
+    "dqaligner_det": "dqaligner",
+    "dqaligner_saliency": "dqaligner_saliency",
+    "dqaligner_saliency_det": "dqaligner_saliency"
+  },
+  "network_train_defaults": {
+    "sstnet": {
+      "optimizer_type": "sgd",
+      "init_lr": 0.01,
+      "min_lr_ratio": 0.01,
+      "momentum": 0.937,
+      "weight_decay": 0.0005
+    },
+    "tridos": {
+      "optimizer_type": "adam",
+      "init_lr": 0.001,
+      "min_lr_ratio": 0.01,
+      "momentum": 0.937,
+      "weight_decay": 0.0
+    },
+    "slowfastnet": {
+      "optimizer_type": "adam",
+      "init_lr": 0.016,
+      "min_lr_ratio": 0.01,
+      "momentum": 0.937,
+      "weight_decay": 0.0
+    },
+    "slowfastnet_9520": {
+      "optimizer_type": "adam",
+      "init_lr": 0.016,
+      "min_lr_ratio": 0.01,
+      "momentum": 0.937,
+      "weight_decay": 0.0
+    },
+    "acm_fpn": {
+      "optimizer_type": "adagrad",
+      "init_lr": 0.01,
+      "min_lr_ratio": 0.0001,
+      "momentum": 0.9,
+      "weight_decay": 0.0001
+    },
+    "acm_unet": {
+      "optimizer_type": "adagrad",
+      "init_lr": 0.01,
+      "min_lr_ratio": 0.0001,
+      "momentum": 0.9,
+      "weight_decay": 0.0001
+    },
+    "acm_unet_saliency": {
+      "optimizer_type": "adagrad",
+      "init_lr": 0.01,
+      "min_lr_ratio": 0.0001,
+      "momentum": 0.9,
+      "weight_decay": 0.0001
+    },
+    "dnanet": {
+      "optimizer_type": "adagrad",
+      "init_lr": 0.01,
+      "min_lr_ratio": 0.0001,
+      "momentum": 0.9,
+      "weight_decay": 0.0001
+    },
+    "dnanet_saliency": {
+      "optimizer_type": "sgd",
+      "init_lr": 0.01,
+      "min_lr_ratio": 0.01,
+      "momentum": 0.937,
+      "weight_decay": 0.0005
+    },
+    "uiunet": {
+      "optimizer_type": "adam",
+      "init_lr": 0.001,
+      "min_lr_ratio": 0.001,
+      "momentum": 0.9,
+      "weight_decay": 0
+    },
+    "uiunet_saliency": {
+      "optimizer_type": "adam",
+      "init_lr": 0.001,
+      "min_lr_ratio": 0.001,
+      "momentum": 0.9,
+      "weight_decay": 0
+    },
+    "alcnet": {
+      "optimizer_type": "adagrad",
+      "init_lr": 0.01,
+      "min_lr_ratio": 0.0001,
+      "momentum": 0.9,
+      "weight_decay": 0.0001
+    },
+    "alcnet_saliency": {
+      "optimizer_type": "adagrad",
+      "init_lr": 0.01,
+      "min_lr_ratio": 0.0001,
+      "momentum": 0.9,
+      "weight_decay": 0.0001
+    },
+    "sctransnet": {
+      "optimizer_type": "adagrad",
+      "init_lr": 0.01,
+      "min_lr_ratio": 0.0001,
+      "momentum": 0.9,
+      "weight_decay": 0.0001
+    },
+    "dqaligner": {
+      "optimizer_type": "adam",
+      "init_lr": 0.001,
+      "min_lr_ratio": 0.01,
+      "momentum": 0.937,
+      "weight_decay": 0.0
+    },
+    "dqaligner_saliency": {
+      "optimizer_type": "adam",
+      "init_lr": 0.001,
+      "min_lr_ratio": 0.01,
+      "momentum": 0.937,
+      "weight_decay": 0.0
+    }
+  },
+  "network_presets": {
+    "acm_fpn": {
+      "backbone_mode": "FPN",
+      "fuse_mode": "AsymBi",
+      "blocks_per_layer": 4,
+      "stride": 8,
+      "save_period": 10
+    },
+    "acm_unet": {
+      "backbone_mode": "UNet",
+      "det_mode": "feature",
+      "fuse_mode": "AsymBi",
+      "blocks_per_layer": 4,
+      "num_classes": 1,
+      "base_size": 512,
+      "batch_size": 8,
+      "stride": 8,
+      "save_period": 10
+    },
+    "acm_unet_saliency": {
+      "backbone_mode": "UNet",
+      "det_mode": "saliency",
+      "fuse_mode": "AsymBi",
+      "blocks_per_layer": 4,
+      "num_classes": 1,
+      "base_size": 512,
+      "batch_size": 4,
+      "stride": 8,
+      "mosaic": true,
+      "mosaic_prob": 0.5,
+      "mixup": true,
+      "mixup_prob": 0.5,
+      "special_aug_ratio": 0.7,
+      "epochs": 100,
+      "freeze_train": false,
+      "freeze_epochs": 100,
+      "ema": false,
+      "lr_decay_type": "cos",
+      "save_period": 10
+    },
+    "dnanet": {
+      "channel_size": "three",
+      "backbone": "resnet_18",
+      "det_mode": "feature",
+      "num_classes": 1,
+      "stride": 8,
+      "base_size": 512,
+      "batch_size": 8,
+      "epochs": 100,
+      "warm_up_epochs": 0,
+      "num_workers": 2,
+      "save_period": 10,
+      "grad_clip_norm": 1,
+      "skip_invalid_grad": 1
+    },
+    "dnanet_saliency": {
+      "channel_size": "three",
+      "backbone": "resnet_18",
+      "det_mode": "saliency",
+      "num_classes": 1,
+      "stride": 8,
+      "base_size": 512,
+      "batch_size": 4,
+      "epochs": 100,
+      "warm_up_epochs": 0,
+      "num_workers": 2,
+      "save_period": 10,
+      "grad_clip_norm": 1,
+      "skip_invalid_grad": 1
+    },
+    "uiunet": {
+      "fuse_mode": "AsymBi",
+      "det_mode": "feature",
+      "num_classes": 1,
+      "stride": "8",
+      "base_size": 512,
+      "batch_size": 4,
+      "epochs": 100,
+      "warm_up_epochs": 0,
+      "num_workers": 2,
+      "save_period": 10,
+      "fp16": true,
+      "grad_clip_norm": 1
+    },
+    "uiunet_saliency": {
+      "fuse_mode": "AsymBi",
+      "det_mode": "saliency",
+      "num_classes": 1,
+      "stride": "8",
+      "base_size": 512,
+      "batch_size": 4,
+      "epochs": 100,
+      "warm_up_epochs": 0,
+      "num_workers": 2,
+      "save_period": 10,
+      "fp16": true,
+      "grad_clip_norm": 1
+    },
+    "alcnet": {
+      "fuse_mode": "AsymBi",
+      "det_mode": "feature",
+      "blocks_per_layer": 4,
+      "num_classes": 1,
+      "stride": 8,
+      "base_size": 512,
+      "batch_size": 4,
+      "epochs": 100,
+      "warm_up_epochs": 0,
+      "num_workers": 2,
+      "save_period": 10,
+      "mosaic": true,
+      "mosaic_prob": 0.5,
+      "mixup": true,
+      "mixup_prob": 0.5,
+      "special_aug_ratio": 0.7
+    },
+    "alcnet_saliency": {
+      "fuse_mode": "AsymBi",
+      "det_mode": "saliency",
+      "blocks_per_layer": 4,
+      "num_classes": 1,
+      "stride": 8,
+      "base_size": 512,
+      "batch_size": 4,
+      "epochs": 100,
+      "warm_up_epochs": 0,
+      "num_workers": 2,
+      "save_period": 10,
+      "mosaic": true,
+      "mosaic_prob": 0.5,
+      "mixup": true,
+      "mixup_prob": 0.5,
+      "special_aug_ratio": 0.7
+    },
+    "sctransnet": {
+      "num_classes": 1,
+      "stride": 8,
+      "base_size": 512,
+      "batch_size": 4,
+      "epochs": 100,
+      "warm_up_epochs": 0,
+      "num_workers": 2,
+      "save_period": 10,
+      "mosaic": true,
+      "mosaic_prob": 0.5,
+      "mixup": true,
+      "mixup_prob": 0.5,
+      "special_aug_ratio": 0.7
+    },
+    "dqaligner": {
+      "det_mode": "feature",
+      "num_classes": 1,
+      "num_frame": 5,
+      "stride": 8,
+      "base_size": 512,
+      "batch_size": 1,
+      "epochs": 100,
+      "save_period": 10
+    },
+    "dqaligner_saliency": {
+      "det_mode": "saliency",
+      "num_classes": 1,
+      "num_frame": 5,
+      "stride": 8,
+      "base_size": 512,
+      "batch_size": 1,
+      "epochs": 100,
+      "save_period": 10
+    }
+  },
+  "network_train_scripts": {
+    "acm_fpn": "train/train_ACM_det.py",
+    "acm_unet": "train/train_ACM_det.py",
+    "acm_unet_saliency": "train/train_ACM_det.py",
+    "dnanet": "train/train_DNANet_det.py",
+    "dnanet_saliency": "train/train_DNANet_det.py",
+    "uiunet": "train/train_UIUNet_det.py",
+    "uiunet_saliency": "train/train_UIUNet_det.py",
+    "alcnet": "train/train_ALCNet_det.py",
+    "alcnet_saliency": "train/train_ALCNet_det.py",
+    "sctransnet": "train/train_SCTransNet_det.py"
+  },
+  "global": {
+    "dataset_root_prefix": "/project/IDIP/QXY"
+  }
+}
