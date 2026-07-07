@@ -139,7 +139,7 @@ AR@100
 项目中配置文件参考UESTC-nnlab调整后版本设置，以便训练对齐
 特别注明DAUB下载后需调整文件夹命名，也可直接使用UESTC-nnlab调整后版本[DAUB](https://pan.baidu.com/s/1nNTvjgDaEAQU7tqQjPZGrw?from=init&pwd=saew), [IRDST](https://pan.baidu.com/s/1igjIT30uqfCKjLbmsMfoFw?pwd=rrnr#list/path=%2F),[ITSDT-15K](https://drive.google.com/file/d/1nnlXK0QCoFqToOL-7WdRQCZfbGJvHLh2/view)。
 
-训练和评估输入统一到当前配置中的尺寸，默认主要为：
+训练和评估输入统一到当前配置中的尺寸（resize），默认主要为：
 
 ```text
 512 x 512
